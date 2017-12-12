@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "Text replacer",
+  "description": "Replaces designated text loaded via chrome with text of user's choosing.",
+  "version": "1.1",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "popup.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "storage"
+  ]
+}

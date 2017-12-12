@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Text Replacer</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+      #container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+
+  <body>
+    <h1><strong>Text Replacer</strong></h1>
+    <div id="container" style="width: 400px">
+      <form action="">
+        <label for="textToReplace">Text to be replaced <br>(separate multiple instances with a ';'.)</label><br>
+        <input type="text" id="textToReplace" name="textToReplace" placeholder="replace this text..."><br>
+
+        <label for="textReplaceWith">Text to replace with</label><br>
+        <input type="text" id="textReplaceWith" name="textReplaceWith" placeholder="with this text..."><br>
+
+        <input type="submit" value="Replace!">
+      </form>
+      <a target="blank_" href="settingsPage.html">Click here to see more</a>
+    </div>
+  </body>
+</html>

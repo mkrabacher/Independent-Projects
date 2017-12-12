@@ -1,0 +1,4 @@
+object is to create an extension that replaces some text with text of the users designation on any laoded web page.
+
+::user stories::
+-user can click icon in chrome extension bar to open popup where they are presented with two input bars and a link. One is titled 'Text to be replaced(separate multiple instances with a ";".)' and is where the user inputs their desired text to be replaced. The other is titled 'With'. The link opens a new tab that displays a  table with a list of the previously added replacement text and a list of their counterpart text that they are replaced with. From here they can be edited or deleted.

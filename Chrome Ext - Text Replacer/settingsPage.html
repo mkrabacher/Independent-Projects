@@ -1,0 +1,129 @@
+
+<!doctype html>
+
+
+<html>
+  <head>
+    <title>Text Replacer</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+      }
+
+      #container {
+        max-width:1000px;
+      }
+
+      #input-container {
+        width: 30%;
+        float:left;
+      }
+
+      #input {
+        width: 100%;
+        margin: auto;
+        padding:3px;
+        border: solid black;
+        border-collapse: collapse;
+      }
+
+      #edit {
+        width: 100%;
+        margin: auto;
+        padding:3px;
+        border-left: solid black;
+        border-bottom: solid black;
+        border-right: solid black;
+        border-collapse: collapse;
+      }
+
+      #editSelecter {
+        max-width: 180px
+      }
+
+      #table-container {
+        display: table;
+        width: 70%;
+        vertical-align: middle;
+        float: right;
+      }
+
+      table, th, td {
+        border: medium solid black;
+        border-collapse: collapse;
+      }
+
+      #tHeader {
+        color: black;
+        margin: 0px;
+        width: auto;
+        padding: 10px;
+        text-align: center;
+      }
+
+      td {
+        margin: 0px;
+        width: auto;
+        padding: 100px;
+        text-align: center;
+      }
+
+    </style>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="popup.js"></script>
+
+
+
+  </head>
+
+
+  <body>
+
+    <div id='container'>
+      <h1><strong>Text Replacer</strong></h1>
+
+      <div id="input-container">
+
+        <div id="input">
+          <label for="textToReplace"><strong>Text to be replaced</strong><br>(separate multiple instances with a ';'.)</label><br>
+          <input type="text" id="textToReplace" name="textToReplace" placeholder="replace this text..."><br><br>
+
+          <label for="textReplaceWith">Text to replace with</label><br>
+          <input type="text" id="textReplaceWith" name="textReplaceWith" placeholder="with this text..."><br><br>
+           <button type="button" id="addReplace">Add a new Replace!</button>
+           <button id='updateBtn' type="button" class="updateBtn">Update</button>
+        </div>
+
+        <div id='edit'>
+          <label for="editSelecter">Select replacer you wish to delete.</label><br>
+          <select id="editSelecter">
+            <option>Select One</option>
+            <option id=0 value="0"> 0 - Sample "REPLACE ME!"</option>
+          </select>
+          <button id='deleteBtn' type="button" class="deleteBtn">Delete</button>
+        </div>
+      </div>
+
+      <table id=table-container>
+        <thead>
+          <tr>
+            <th id=tHeader style="width:74px"><u>Index #</u></th>
+            <th id=tHeader style="width:250px"><u>Text Being Replaced</u></th>
+            <th id=tHeader style="width:250px"><u>Replacing Text</u></th>
+          </tr>
+        </thead>
+        <tbody id=t-body>
+          <tr id=0>
+            <td>0</td>
+            <td>Sample "REPLACE ME!"</td>
+            <td>Sample "I'LL REPLACE YOU!"</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </body>
+</html>
